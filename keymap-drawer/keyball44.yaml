@@ -315,3 +315,25 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [19, 20]
+  k: $$mdi:mouse-left-click-outline$$
+  l: [QWRT]
+- p: [20, 21]
+  k: $$mdi:mouse-right-click-outline$$
+  l: [QWRT]
+- p: [15, 16]
+  k: Ctl+C
+  l: [QWRT]
+- p: [4, 5]
+  k: Ctl+Sft+V
+  l: [QWRT]
+- p: [3, 4]
+  k: Ctl+V
+  l: [QWRT]
+- p: [6, 7]
+  k: $$mdi:backspace-reverse-outline$$
+  l: [QWRT]
+- p: [2, 3]
+  k: Ctl+X
+  l: [QWRT]
