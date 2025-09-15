@@ -1,0 +1,61 @@
+/ {
+  combos {
+    compatible = "zmk,combos";
+
+    // J + K で 左クリック
+    jk_btn1 {
+      timeout-ms = <40>;
+      key-positions = <19 20>;
+      layers = <0>;
+      bindings = <&mkp LCLK>;
+    };
+
+    // K + L で 右クリック
+    kl_btn2 {
+      timeout-ms = <40>;
+      key-positions = <20 21>;
+      layers = <0>;
+      bindings = <&mkp RCLK>;
+    };
+
+    // d + f で Ctrl + C（コピー）
+    df_copy {
+      timeout-ms = <40>;
+      key-positions = <15 16>;
+      layers = <0>;
+      bindings = <&kp LC(C)>;
+    };
+
+    // r + t で Ctrl + Shift + V（貼り付け2）
+    rt_paste2 {
+      timeout-ms = <40>;
+      key-positions = <4 5>;
+      layers = <0>;
+      bindings = <&kp LC(LS(V))>;
+    };
+
+    // e + r で Ctrl + V（貼り付け）
+    er_paste {
+      timeout-ms = <40>;
+      key-positions = <3 4>;
+      layers = <0>;
+      bindings = <&kp LC(V)>;
+    };
+
+    // y + u で Delete（削除）
+    yu_del {
+      timeout-ms = <40>;
+      key-positions = <6 7>;
+      layers = <0>;
+      bindings = <&kp DELETE>;
+    };
+
+    // w + e で Ctrl + X（切り取り）
+    we_cut {
+      timeout-ms = <40>;
+      key-positions = <2 3>;
+      layers = <0>;
+      bindings = <&kp LC(X)>;
+    };
+  };
+};
