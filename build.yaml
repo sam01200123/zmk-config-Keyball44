@@ -14,7 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: keyball_nano/keyball44_left
+    shield: keyball44_left
   - board: nice_nano_v2
-    shield: keyball_nano/keyball44_right
+    shield: keyball44_right
+
 
