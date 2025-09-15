@@ -122,4 +122,5 @@
             >;
         };
     };
+#include "combos.dtsi"
 };
