@@ -84,7 +84,7 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&none   &kp LS(SQT)   &kp LS(N7)     &kp N7        &kp LS(N8)          &kp LS(N9)              &kp LS(SLASH)          &kp LS(N8)  &kp LS(N9)     &kp LS(INT1)          &kp SQT        &kp INT3
+&none   &kp LS(SQT)   &kp LS(N7)     &kp N7        &kp LS(N8)          &kp LS(N9)              &kp SLASH              &kp LS(N8)  &kp LS(N9)     &kp LS(INT1)          &kp SQT        &kp INT3
 &none   &kp LS(SEMI)  &kp N4         &kp N4        &kp N5              &kp N6                  &kp NON_US_HASH        &kp LS(SLASH)  &kp LS(EQUAL)  &kp LS(N3)            &kp LS(N4)     &kp LS(N2)
 &trans  &kp LS(MINUS) &kp N1         &kp LS(N1)    &kp LS(N2)          &kp N3                  &kp LS(NON_US_HASH)    &kp LS(N3)     &kp EQUAL      &kp LS(LEFT_BRACKET)  &kp LS(SLASH)  &kp LS(INT3)
 &kp N0  &kp N0        &trans         &kp INT5      &kp LS(ENTER)                         &kp LC(A)  &trans                                                             &kp INT4
