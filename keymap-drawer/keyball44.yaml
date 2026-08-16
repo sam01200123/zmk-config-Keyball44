@@ -97,7 +97,7 @@ layers:
   - {t: '7', s: '&'}
   - {t: Sft+8, s: Sft+*}
   - {t: Sft+9, s: Sft+(}
-  - {t: Sft+/, s: 'Sft+?'}
+  - {t: /, s: '?'}
   - {t: Sft+8, s: Sft+*}
   - {t: Sft+9, s: Sft+(}
   - Sft+INT1
