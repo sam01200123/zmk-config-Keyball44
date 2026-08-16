@@ -3,59 +3,75 @@
 combos {
   compatible = "zmk,combos";
 
-  // J + K → 左クリック
-  jk_btn1 {
-    timeout-ms = <40>;
-    key-positions = <19 20>;
-    layers = <0>;
-    bindings = <&mkp LCLK>;
-  };
-
-  // K + L → 右クリック
-  kl_btn2 {
-    timeout-ms = <40>;
-    key-positions = <20 21>;
-    layers = <0>;
-    bindings = <&mkp RCLK>;
-  };
-
-  // d + f → Ctrl + C
+  // D + F → Ctrl + C
   df_copy {
-    timeout-ms = <40>;
+    timeout-ms = <35>;
     key-positions = <15 16>;
     layers = <0>;
     bindings = <&kp LC(C)>;
   };
 
-  // r + t → Ctrl + Shift + V
-  rt_paste2 {
-    timeout-ms = <40>;
-    key-positions = <4 5>;
-    layers = <0>;
-    bindings = <&kp LC(LS(V))>;
-  };
-
-  // e + r → Ctrl + V
+  // E + R → hold 130 ms, then Ctrl + V
   er_paste {
-    timeout-ms = <40>;
+    timeout-ms = <35>;
     key-positions = <3 4>;
     layers = <0>;
-    bindings = <&kp LC(V)>;
+    bindings = <&combo_hold_130 LC(V) 0>;
   };
 
-  // y + u → Delete
-  yu_del {
-    timeout-ms = <40>;
-    key-positions = <6 7>;
+  // R + T → hold 130 ms, then Ctrl + Shift + V
+  rt_paste2 {
+    timeout-ms = <35>;
+    key-positions = <4 5>;
     layers = <0>;
-    bindings = <&kp DELETE>;
+    bindings = <&combo_hold_130 LC(LS(V)) 0>;
   };
 
-  // w + e → Ctrl + X
+  // W + E → Ctrl + X
   we_cut {
-    timeout-ms = <40>;
+    timeout-ms = <35>;
     key-positions = <2 3>;
     layers = <0>;
     bindings = <&kp LC(X)>;
+  };
+
+  // F + G → Enter
+  fg_enter {
+    timeout-ms = <35>;
+    key-positions = <16 17>;
+    layers = <0>;
+    bindings = <&kp ENTER>;
+  };
+
+  // C + V → Alt + C (Tera Term copy)
+  cv_tt_copy {
+    timeout-ms = <35>;
+    key-positions = <27 28>;
+    layers = <0>;
+    bindings = <&kp LA(C)>;
+  };
+
+  // V + B → Alt + V (Tera Term paste)
+  vb_tt_paste {
+    timeout-ms = <35>;
+    key-positions = <28 29>;
+    layers = <0>;
+    bindings = <&kp LA(V)>;
+  };
+
+  // Y + U → Home
+  yu_home {
+    timeout-ms = <35>;
+    key-positions = <6 7>;
+    layers = <0>;
+    bindings = <&kp HOME>;
+  };
+
+  // U + I → End
+  ui_end {
+    timeout-ms = <35>;
+    key-positions = <7 8>;
+    layers = <0>;
+    bindings = <&kp END>;
   };
 };

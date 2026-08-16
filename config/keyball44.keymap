@@ -30,6 +30,15 @@
     // custom shift using mod-morph 
 
     behaviors {
+        combo_hold_130: combo_hold_130 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COMBO_HOLD_130";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <130>;
+            bindings = <&kp>, <&none>;
+        };
+
         cmqus: comma_question {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QUESTION";
@@ -55,50 +64,50 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp ESCAPE      &kp Q     &kp W         &kp E        &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
-&kp LCTRL       &kp A     &kp S         &kp D        &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LEFT_SHIFT  &kp Z     &kp X         &kp C        &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
-&kp LGUI        &kp LALT  &lt 6 ESCAPE  &lt 4 SPACE  &lt 5 TAB             &kp ENTER  &lt 2 BACKSPACE                                        &kp DELETE
+&kp DELETE  &kp Q     &kp W     &kp E         &kp R      &kp T                 &kp Y      &kp U       &kp I             &kp O    &kp P             &kp ENTER
+&kp LCTRL   &kp A     &kp S     &kp D         &kp F      &kp G                 &kp H      &kp J       &kp K             &kp L    &kp MINUS         &kp ESCAPE
+&kp LSHIFT  &kp Z     &kp X     &kp C         &kp V      &kp B                 &kp N      &kp M       &kp COMMA         &kp DOT  &kp LEFT_BRACKET  &kp INT3
+&kp LALT    &kp LGUI  &lt 3 BACKSPACE  &lt 4 SPACE  &mt LSHIFT TAB        &kp LANG2  &lt 2 LANG1                                          &kp LC(Z)
             >;
         };
 
         number_layer {
-            label = "NUM";
+            label = "WIRELESS";
             bindings = <
-&none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
-&none   &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT     &none                     &none         &none         &none         &none         &none         &none
-&none   &none         &none         &none         &none         &none                     &none         &none         &trans        &trans        &none         &none
-&trans  &trans        &trans        &trans        &trans                          &trans  &trans                                                                &trans
+&none  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5              &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+&none  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none                &none   &none   &none   &none   &none   &none
+&none  &none        &none        &none        &none        &none                &none   &none   &none   &none   &none   &none
+&none  &none        &none        &none        &none                         &none  &none                                &to DEFAULT
             >;
         };
 
         symbol_layer {
             label = "SYM";
             bindings = <
-&none   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT              &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none   &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                   &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SQT                &none
-&none   &trans           &trans        &trans        &trans        &trans                   &kp UNDERSCORE  &kp PLUS       &trans            &trans                &kp NON_US_BACKSLASH   &none
-&trans  &trans           &trans        &trans        &trans                         &trans  &trans                                                                                        &trans
+&none   &kp LS(SQT)   &kp LS(N7)     &kp N7        &kp LS(N8)          &kp LS(N9)              &kp LS(SLASH)          &kp LS(N8)  &kp LS(N9)     &kp LS(INT1)          &kp SQT        &kp INT3
+&none   &kp LS(SEMI)  &kp N4         &kp N4        &kp N5              &kp N6                  &kp NON_US_HASH        &kp LS(SLASH)  &kp LS(EQUAL)  &kp LS(N3)            &kp LS(N4)     &kp LS(N2)
+&trans  &kp LS(MINUS) &kp N1         &kp LS(N1)    &kp LS(N2)          &kp N3                  &kp LS(NON_US_HASH)    &kp LS(N3)     &kp EQUAL      &kp LS(LEFT_BRACKET)  &kp LS(SLASH)  &kp LS(INT3)
+&kp N0  &kp N0        &trans         &kp INT5      &kp LS(ENTER)                         &kp LC(A)  &trans                                                             &kp INT4
             >;
         };
 
         function_layer {
             label = "FUN";
             bindings = <
-&none   &kp F1  &kp F2   &kp F3   &kp F4   &none              &none  &none  &none  &none  &none  &none
-&none   &kp F5  &kp F6   &kp F7   &kp F8   &none              &none  &none  &none  &none  &none  &none
-&none   &kp F9  &kp F10  &kp F11  &kp F12  &none              &none  &none  &none  &none  &none  &none
-&trans  &trans  &trans   &trans   &trans              &trans  &mo 3                              &trans
+&kp LC(S)  &none  &none  &kp N7  &kp N8  &kp N9              &kp LC(F)  &kp LC(A)  &kp UP     &none      &none  &none
+&trans     &none  &none  &kp N4  &kp N5  &kp N6              &none      &kp LEFT   &kp DOWN   &kp RIGHT  &none  &none
+&trans     &none  &none  &kp N1  &kp N2  &kp N3              &none      &none      &none      &none      &none  &none
+&trans     &kp N0 &none  &none   &none                  &kp LCTRL  &none                                &none
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&none   &kp N1          &kp N2          &kp N3        &kp N4     &kp N5              &kp N6         &kp N7     &kp N8  &kp N9     &kp N0     &none
-&none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none               &kp PAGE_UP    &mkp LCLK  &none   &mkp RCLK  &mkp MCLK  &none
-&none   &none           &none           &none         &none      &none               &kp PAGE_DOWN  &none      &none   &none      &none      &none
-&trans  &trans          &trans          &trans        &trans                 &trans  &trans                                                  &none
+&kp F1   &kp F4   &kp F7   &kp F13  &kp F14  &kp F15              &none          &none      &none     &none          &none        &none
+&kp F2   &kp F5   &kp F8   &kp F16  &kp F17  &kp F18              &kp PAGE_UP    &mkp LCLK  &mkp RCLK &kp LG(LS(S)) &mo SCROLL  &mo SNIPE
+&kp F3   &kp F6   &kp F9   &kp F4   &kp F7   &kp F19              &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp RIGHT     &to NUM      &none
+&kp F10  &kp F12  &trans   &trans   &trans                    &trans  &trans                                          &trans
             >;
         };
 
