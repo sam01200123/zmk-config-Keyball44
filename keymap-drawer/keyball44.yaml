@@ -44,7 +44,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - LANG2
   - {t: LANG1, h: SYM}
-  - Ctl+Z
+  - '&ctrl_z'
   WIRELESS:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '1', s: '!'}
